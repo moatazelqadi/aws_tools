@@ -35,7 +35,7 @@ def main(crq,instanceName):
         ])
         
 if __name__=="__main__":
-    if sys.argv>=3:
+    if len(sys.argv)>=3:
         crq = sys.argv[1]
         instanceName = sys.argv[2]
         main(crq,instanceName)

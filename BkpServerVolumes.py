@@ -9,6 +9,7 @@ It takes 2 arguments, CRQ (The change request number) and the instance name.
 """
 import boto3
 import datetime
+import sys
 def main(crq,instanceName):
     #define ISO date string to be used in snapshot name
     yearFromNow = (datetime.datetime.now() + datetime.timedelta(days=365)).strftime('%Y%m%d')

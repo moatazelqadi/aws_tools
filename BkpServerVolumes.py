@@ -22,7 +22,7 @@ def main(crq,instanceName):
     for volume in instance.volumes.all():
         snapshotDesc = '{} {} {}'.format(instanceName,volume.id, crq)
         snapshotName = 'DoNotDeleteBefore{}-{}'.format(yearFromNow,volume.id)
-        volume.create_snapshot(Description=snapshotDesc,TagSpecifications=[
+        snapshotId = volume.create_snapshot(Description=snapshotDesc,TagSpecifications=[
             {
                 'ResourceType': 'snapshot',
                 'Tags': [
@@ -33,6 +33,7 @@ def main(crq,instanceName):
                 ]
             },
         ])
+        print(snapshotId)
         
 if __name__=="__main__":
     if len(sys.argv)>=3:

@@ -19,6 +19,6 @@ for i in instances:
             if tag['Value'] ==   this_account_id:
                 continue
     i.create_tags(Tags = [{'Key':'account_id','Value':this_account_id}])
-    print('Added or created account id %s for instance %s',this_account_id,i.id)    
+    print('Added or created account id %s for instance %s'%(this_account_id,i.id))    
     print()
     

@@ -3,11 +3,11 @@ import boto3
 import datetime
 import csv
 """
-This tool generates a csv report of snapshot ids (snapshots.csv), creation date, and tags.
+This tool generates a csv report of snapshot ids (snapshots_accountID.csv), creation date, and tags.
 It accepts the optional parameter (lastYearToReport)
 ``Parameters``
             
-            lastYearToReport: The year (e.g. 2022) after which newer snapshots are not reported. The default is the current year
+            lastYearToReport: The year (e.g. 2022) where snapshots are not reported if newer. The default is the current year.
 
 ``Example``
             $python3 reportSnapshots.py  2020
@@ -16,7 +16,7 @@ def ReportSnapshots(lastYearToReport):
     this_account_id =  boto3.client('sts').get_caller_identity().get('Account')
     ec2 = boto3.Session().resource('ec2')
     snapshots = ec2.snapshots.filter(OwnerIds = [this_account_id])
-    with open(r'snapshots.csv','w') as f:
+    with open(r'snapshots_{}.csv'.format(this_account_id),'w') as f:
         writer = csv.writer(f)
         writer.writerow(('id','year','month','day','tags'))
         for s in snapshots:

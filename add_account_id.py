@@ -3,7 +3,7 @@ import boto3
 This module adds and poulates a tag "account_id" to all ec2 instances in a given account.
 These user added tags will propagate to snaphshots of these instances. When those snapshots are stored in other accounts (e.g. AWS Backup vault), then these tags can be used to identify the original owner account.
 ``Example``
-            $python3 AddAccountId.py 
+            $python3 add_account_id.py 
 
 ``ToDo``
             Add other resource types

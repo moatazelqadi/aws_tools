@@ -10,7 +10,7 @@ It accepts the optional parameter (lastYearToReport)
             lastYearToReport: The year (e.g. 2022) where snapshots are not reported if newer. The default is the current year.
 
 ``Example``
-            $python3 reportSnapshots.py  2020
+            $python3 report_snapshots.py  2020
 """
 def ReportSnapshots(lastYearToReport):
     this_account_id =  boto3.client('sts').get_caller_identity().get('Account')

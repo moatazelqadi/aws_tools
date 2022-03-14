@@ -2,7 +2,7 @@
 This module creates a full image of an EC2 instance by creating a snapshot of each volume attached to the machine.
 It takes 2 arguments, CRQ (The change request number) and the instance name.
 ``Example``
-            $BkpServerVolumes.py CRQ1234 ServerName
+            $bkp_server_volumes.py CRQ1234 ServerName
 
 ``ToDo``
             Support multiple servers in one call

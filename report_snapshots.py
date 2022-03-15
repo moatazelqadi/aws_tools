@@ -3,7 +3,7 @@ import boto3
 import datetime
 import csv
 """
-This tool generates a csv report of snapshot ids (snapshots_accountID.csv), creation date, and tags.
+This tool generates a csv report (snapshots_accountID.csv) with the following columns: snapshot ids , creation date, and tags.
 It accepts the optional parameter (lastYearToReport)
 ``Parameters``
             

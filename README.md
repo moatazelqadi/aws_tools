@@ -4,7 +4,7 @@ Tools for automating common AWS managemnt tasks
 ### Motivation
 In a multi-account AWS organisation, resources from individual accounts can be  backed up and copied to a central repository. In this setup, the cost of retaining backups is attributed to the central account not the account owning the original resource.
 ### Solution
-This tool adds and poulates a tag "account_id" to all ec2 instances in a given account. These user added tags will propagate to snaphshots of these instances. When those snapshots are stored in other accounts (e.g. AWS Backup vault), then these tags can be used to identify the original owner account.
+This tool adds and populates a tag "account_id" to all ec2 instances in a given account. These user added tags will propagate to snaphshots of these instances. When those snapshots are stored in other accounts (e.g. AWS Backup vault), then these tags can be used to identify the original owner account.
 
 ## <strong>bkp_server_volumes</strong>
 ### Motivation

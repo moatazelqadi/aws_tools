@@ -6,6 +6,13 @@ In a multi-account AWS organisation, resources from individual accounts can be  
 ### Solution
 This tool adds and populates a tag "account_id" to all ec2 instances in a given account. These user added tags will propagate to snaphshots of these instances. When those snapshots are stored in other accounts (e.g. AWS Backup vault), then these tags can be used to identify the original owner account.
 
+## <strong>add_tag_to_volume</strong>
+### Motivation
+AWS Backup allows resources to be backed up if they are tagged with a certain configured tag.
+Manually tagging resources as required can be challenging in a large organisation.
+### Solution
+This tool adds a custom tag and value to EBS volumes that are 'in-use'.
+
 ## <strong>bkp_server_volumes</strong>
 ### Motivation
 A common operation task in maintaining production loads in AWS is backing up EC2 instances with all their attached EBS volumes.

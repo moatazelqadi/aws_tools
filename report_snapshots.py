@@ -1,7 +1,3 @@
-import sys
-import boto3
-import datetime
-import csv
 """
 This tool generates a csv report (snapshots_accountID.csv) with the following columns: snapshot ids , creation date, and tags.
 It accepts the optional parameter (lastYearToReport)
@@ -11,7 +7,14 @@ It accepts the optional parameter (lastYearToReport)
 
 ``Example``
             $python3 report_snapshots.py  2020
+
+© Moataz ElQadi, 2022
 """
+import sys
+import boto3
+import datetime
+import csv
+
 def ReportSnapshots(lastYearToReport):
     this_account_id =  boto3.client('sts').get_caller_identity().get('Account')
     ec2 = boto3.Session().resource('ec2')

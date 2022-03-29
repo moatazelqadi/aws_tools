@@ -6,6 +6,8 @@ and the input csv file. The CRQ is used as the log file name.
 
 ``Example``
             $python3 delete_snapshots.py 
+
+© Moataz ElQadi, 2022
 """
 
 import csv

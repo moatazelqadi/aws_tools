@@ -4,6 +4,8 @@ The report contains the following columns profile,function_name,runtime
 
 ``Example``
             $python3 report_lambda_all_profiles.py
+
+© Moataz ElQadi, 2022
 """
 import boto3
 #get all available profiles    

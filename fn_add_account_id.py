@@ -18,7 +18,7 @@ def addIdToResources(this_account_id,resources):
         r.create_tags(Tags = [{'Key':'account_id','Value':this_account_id}])        
         print('Added or created account id %s to %s'%(this_account_id,r.id))    
         print()
-        break
+        
 
 def tagInstances(this_account_id):
     print('**Tagging instances**')
